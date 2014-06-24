@@ -1,0 +1,56 @@
+svg {
+    width: 250px;
+    height: 250px;
+}
+
+@-webkit-keyframes spin {
+   from { -webkit-transform: rotate(0deg); }
+   to   { -webkit-transform: rotate(360deg); }
+}
+
+svg {
+   -webkit-animation-name: spin;
+   -webkit-animation-duration: 7s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: linear; /* ease is the default */
+}
+
+body, html {
+  height: 100%;
+}
+
+div {
+    width: 750px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sidebar-left {
+  width: 200px;
+  float: left;
+  height: 100%;
+}
+
+.sidebar-left button {
+  top: 40%;
+  margin-left: 100px;
+  position: absolute;
+  padding: 10px 19px;
+  font-size: 17px;
+  line-height: 1.471;
+  border-radius: 6px;
+  border: none;
+
+  color: #ffffff;
+  background-color: #bdc3c7;
+}
+
+.sidebar-left button:hover {
+  background-color: #D1D5D8;
+  cursor: pointer;
+}
+
+.sidebar-left button:active {
+  background-color: #545556;
+}
