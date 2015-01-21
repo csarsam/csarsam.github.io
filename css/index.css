@@ -1,3 +1,8 @@
+header {
+  margin-top: 5rem;
+  height: 22rem;
+}
+
 body {
   background-color: #B3E2E3;
 }
@@ -46,4 +51,35 @@ body {
   font:  bold 5rem "oswald";
   width: 100%;
   text-transform: uppercase;
+}
+
+.contact, .projects {
+  margin-top: 5rem;
+  width: 100%;
+  text-align: center;
+  font:  bold 2rem "oswald";
+  padding-bottom: 3rem;
+}
+
+.contact a, .contact span, .projects a {
+  text-decoration: none;
+  display: block;
+  color: white;
+}
+
+.sectionTitle {
+  color: #F9A5A1;
+  font: bold 4rem "oswald";
+}
+
+@media only screen 
+and (min-width : 1224px) {
+  .contact, .projects {
+    width: 40%;
+    float: left;
+  }
+  .contact {
+    margin-left: 10%;
+    padding-bottom: 3rem;
+  }
 }
