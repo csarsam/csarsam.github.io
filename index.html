@@ -1,53 +1,40 @@
+---
+layout: layout
+title: Claire Sarsam
+---
 
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Claire Sarsam</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
+  <header>
+    <div class="logo">
+      <i id="star3"></i>
+      <i id="star2"></i>
+      <i id="star1"></i>
+    </div>
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <div class="name">Claire Sarsam</div>
+  </header>
 
-        <link rel="stylesheet" href="../../css/normalize.css">
-        <link rel="stylesheet" href="css/index.css">
-        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <div class="row">
 
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <div class="contact col-md-4">
+      <div class="sectionTitle">Contact</div>
+      <a href="http://github.com/csarsam">Github</a>
+      <a href="https://www.linkedin.com/profile/view?id=120893840">LinkedIn</a>
+      <span>csarsam at gmail dot com</span>
+    </div>
 
-        <header>
-          <div class="logo">
-            <i id="star3"></i>
-            <i id="star2"></i>
-            <i id="star1"></i>
-          </div>
+    <div class="projects col-md-4">
+      <div class="sectionTitle">Projects</div>
+      <a href="projects/snowflakes/snowflakes.html">Snowflakes</a>
+      <a href="https://github.com/Workiva/wf-uicomponents/commits?author=clairesarsam-wf">wf-uicomponents</a>
+    </div>
 
-          <div class="name">Claire Sarsam</div>
-        </header>
+    <div class="blog col-md-4">
+      <div class="sectionTitle">Blog</div>
+      {% for post in site.posts %}  
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {% endfor %}
+    </div>
 
-        <div class="contact">
-          <div class="sectionTitle">Contact</div>
-          <a href="http://github.com/clairesarsam-wf">Github 1</a>
-          <a href="http://github.com/csarsam">Github 2</a>
-          <a href="https://www.linkedin.com/profile/view?id=120893840">LinkedIn</a>
-          <span>csarsam at gmail dot com</span>
-        </div>
-
-        <div class="projects">
-          <div class="sectionTitle">Projects</div>
-          <a href="projects/snowflakes/snowflakes.html">Snowflakes</a>
-          <a href="https://github.com/Workiva/wf-uicomponents/commits?author=clairesarsam-wf">wf-uicomponents</a>
-        </div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    </body>
-</html>
+  </div>
+</div>

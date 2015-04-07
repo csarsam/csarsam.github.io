@@ -4,13 +4,14 @@ header {
 }
 
 body {
-  background-color: #B3E2E3;
+  background-color: #B3E2E3 !important;
 }
 
 .logo {
   margin-left: auto;
   margin-right: auto;
   width: 17rem;
+  height: 18rem;
 }
 
 .logo i {
@@ -42,44 +43,31 @@ body {
 }
 
 .name {
-  position: absolute;
   color: white;
   font-family: sans-serif;
-  margin-top: 17rem;
   font-size: 3rem;
   text-align: center;
   font:  bold 5rem "oswald";
-  width: 100%;
   text-transform: uppercase;
 }
 
-.contact, .projects {
+.contact, .projects, .blog {
   margin-top: 5rem;
-  width: 100%;
   text-align: center;
   font:  bold 2rem "oswald";
   padding-bottom: 3rem;
 }
 
-.contact a, .contact span, .projects a {
+.contact a, .contact span, .projects a, .blog a {
   text-decoration: none;
   display: block;
   color: white;
+}
+.contact a:hover, .projects a:hover, .blog a:hover {
+  text-decoration: none;
 }
 
 .sectionTitle {
   color: #F9A5A1;
   font: bold 4rem "oswald";
-}
-
-@media only screen 
-and (min-width : 1224px) {
-  .contact, .projects {
-    width: 40%;
-    float: left;
-  }
-  .contact {
-    margin-left: 10%;
-    padding-bottom: 3rem;
-  }
 }
