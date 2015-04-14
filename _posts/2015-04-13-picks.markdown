@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Weekly Picks: April 13th, 2015
+title: Weekly Picks - April 13th, 2015
 ---
 
 <div class="page-header">
-<h1>Weekly Picks: April 13th, 2015</h1>
+<h1>Weekly Picks - April 13th, 2015</h1>
 </div>
 
 One of my favorite podcasts, JavaScript Jabber, does a segment at the end of every episode where everyone talks about a few of their recent favorite things. I've discovered tons of great blog posts, books, movies, research studies, all kinds of stuff, through the segment and I thought it would be fun to do my own weekly picks. So, here is episode 1!
@@ -18,7 +18,7 @@ There were many aesthetically beautiful shots and warm, funny moments despite th
 
 Thomas Schranz wrote [this post](https://www.blossom.co/blog/who-is-behind-dart) about the engineers behind Dart. He made a great point about why we should care about the topic:
 
-> in a way they [programming languages and runtimes] tend to reflect the personalities and beliefs of their creators
+> ...in a way they [programming languages and runtimes] tend to reflect the personalities and beliefs of their creators.
 
 He listed developer sanity, developer productivity, developer tool performance, and the web as a platform as the top-level concepts that the Dart decision makers care about. I mostly agree with the list - Dart is great for developer sanity once you're on a big enough team, making a big enough product. The same goes for developer productivity. And I'm pretty enthusiastic about the web and JavaScript as a platform. Developer tool performance I'm not incredibly on board with. I would still rather use grunt or gulp than pub transformers.
 
