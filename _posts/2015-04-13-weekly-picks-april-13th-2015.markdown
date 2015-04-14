@@ -12,6 +12,8 @@ One of my favorite podcasts, JavaScript Jabber, does a segment at the end of eve
 ##Robot & Frank
 This movie is set in the nearish future. The set isn't slickly futuristic and unrecognizable - there are still smartphones, video calls sometimes suck, there are both tiny smartcars and ordinary sedans. This future is a subtle, relatable one, which I think made the film much more moving. The story follows Frank, an elderly retired burglar, and a healthcare robot given to him by his son as Frank struggles with dementia. Frank realizes he can manipulate the robot into helping him plan robberies, while the robot manipulates him into doing things that are good for his health.
 
+![](/img/robotandfrank.jpg)
+
 There were many aesthetically beautiful shots and warm, funny moments despite the sad subject matter. The interaction between Robot and the humans is definitely the strong point of the movie. Frank's relationships with his two beautiful adult children are somewhat unconvincing and underdeveloped, and not nearly as evocative as his connection with Robot. Movies about AI-human relationships tend to get to me - I loved this one, although I don't think it executed it's ideas nearly as clearly as Spike Jones's Her (which is amazing and stunning and you should watch it yesterday).
 
 ##Who is behind Dart?
