@@ -4,7 +4,7 @@ p, ul, pre {
 }
 
 h1, h2, h3, h4, h5 {
-  color: #4F9A9A !important;
+  color: #B3E2E3 !important;
 }
 
 body > .container {
@@ -12,11 +12,11 @@ body > .container {
 }
 
 .page-header {
-  border-bottom: solid 3px #B3E2E3 !important;
+  border-bottom: solid 3px #E3EAF8 !important;
 }
 
 code {
-  color: #FF8383 !important;
+  color: #6178AC !important;
 }
 
 p img {
