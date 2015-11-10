@@ -66,59 +66,113 @@
     "groupTitle": "Auth"
   },
   {
-    "type": "post",
-    "url": "/coverage_contracts/:contract_id/offers",
-    "title": "Creating a new contract offer",
-    "name": "PostContractOffer",
-    "group": "Coverage_Contracts",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "offerAmount",
-            "description": "<p>The offer amount for the coverage contract.</p> "
-          }
-        ]
-      }
-    },
-    "error": {
-      "fields": {
-        "Error 4xx": [
-          {
-            "group": "Error 4xx",
-            "optional": false,
-            "field": "BadRequest",
-            "description": "<p>400 You must include the required fields contract and offerAmount</p> "
-          }
-        ]
-      }
-    },
+    "type": "get",
+    "url": "/courts",
+    "title": "Get a object containing all Arizona courts.",
+    "name": "GetCourts",
+    "group": "Courts",
     "success": {
       "fields": {
         "Success 200": [
           {
             "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "courts",
+            "description": "<p>An object containing the county, city, and justice courts.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "courts.county",
+            "description": "<p>An array of strings representing county courts.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "courts.city",
+            "description": "<p>An array of strings representing city courts.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "courts.justice",
+            "description": "<p>An array of objects containing arrays of justice courts.</p> "
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/courts.js",
+    "groupTitle": "Courts"
+  },
+  {
+    "type": "get",
+    "url": "/coverage_contracts",
+    "title": "Get a list of all the coverage contracts with coverageDates in the future.",
+    "name": "GetCoverageContracts",
+    "group": "CoverageContracts",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "coverageContracts",
+            "description": "<p>An array of all the CoverageContract objects</p> "
+          },
+          {
+            "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "msg",
-            "description": "<p>Contract offer posted successfully</p> "
+            "field": "contract.courtName",
+            "description": "<p>The court at which the coverage will take place.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "contract.description",
+            "description": "<p>A description about the type &amp; details of the coverage.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "contract.coverageDate",
+            "description": "<p>The date at which the coverage will take place.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "contract.postedDate",
+            "description": "<p>The date the contract was posted.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "contract.postedBy",
+            "description": "<p>The id of the user that posted the contract.</p> "
           }
         ]
       }
     },
     "version": "0.0.0",
     "filename": "routes/coverage_contracts.js",
-    "groupTitle": "Coverage_Contracts"
+    "groupTitle": "CoverageContracts"
   },
   {
     "type": "post",
     "url": "/coverage_contracts",
-    "title": "Creating a new CoverageContract",
+    "title": "Creating a new coverage contract",
     "name": "PostCoverageContract",
-    "group": "Coverage_Contracts",
+    "group": "CoverageContracts",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -133,7 +187,7 @@
             "group": "Parameter",
             "type": "Date",
             "optional": false,
-            "field": "contractDate",
+            "field": "coverageDate",
             "description": "<p>The date at which the coverage will take place.</p> "
           },
           {
@@ -173,6 +227,54 @@
     },
     "version": "0.0.0",
     "filename": "routes/coverage_contracts.js",
+    "groupTitle": "CoverageContracts"
+  },
+  {
+    "type": "post",
+    "url": "/coverage_contracts/:contract_id/offers",
+    "title": "Creating a new contract offer",
+    "name": "PostContractOffer",
+    "group": "Coverage_Contracts",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "offerAmount",
+            "description": "<p>The offer amount for the coverage contract.</p> "
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "optional": false,
+            "field": "BadRequest",
+            "description": "<p>400 You must include the required field offerAmount</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>Contract offer posted successfully</p> "
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/coverage_contracts.js",
     "groupTitle": "Coverage_Contracts"
   },
   {
@@ -184,20 +286,6 @@
     "success": {
       "fields": {
         "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Boolean",
-            "optional": false,
-            "field": "isAvailable",
-            "description": "<p>If the user is available to provide coverage</p> "
-          },
-          {
-            "group": "Success 200",
-            "type": "Boolean",
-            "optional": false,
-            "field": "disableGps",
-            "description": "<p>If the user has disabled Gps</p> "
-          },
           {
             "group": "Success 200",
             "type": "Boolean",
@@ -228,20 +316,6 @@
     "parameter": {
       "fields": {
         "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Boolean",
-            "optional": false,
-            "field": "isAvailable",
-            "description": "<p>Update the user is available</p> "
-          },
-          {
-            "group": "Parameter",
-            "type": "Boolean",
-            "optional": false,
-            "field": "disableGps",
-            "description": "<p>Update the user has disabled Gps</p> "
-          },
           {
             "group": "Parameter",
             "type": "Boolean",
